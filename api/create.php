@@ -17,6 +17,8 @@ $data = json_decode( file_get_contents( "php://input" ) );
 $item->message        = $data->message;
 $item->created        = date( 'Y-m-d H:i:s' );
 
+print_r($data->message);
+
 if ( $item->createMessage() ) {
     echo 'Message created successfully.';
 } else {
