@@ -1,7 +1,7 @@
 <?php
 class Database {
     private $host          = "localhost";
-    private $database_name = "bkash-sms";
+    private $database_name = "test_db";
     private $username      = "root";
     private $password      = "root";
 

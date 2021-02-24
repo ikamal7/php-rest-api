@@ -27,7 +27,7 @@ class Messages {
 
     // CREATE
     public function createMessage() {
-        $sqlQuery = "INSERT INTO  { $this->db_table } SET
+        $sqlQuery = "INSERT INTO  `$this->db_table` SET
                         message = :message,
                         created = :created";
 
@@ -44,6 +44,8 @@ class Messages {
         if ( $stmt->execute() ) {
             return true;
         }
+
+        print_r($stmt->errorInfo());
 
         return false;
     }
